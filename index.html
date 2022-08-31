@@ -21,32 +21,32 @@
                         <div class="weather-head__block-one">
                             <p id="city">Odesa</p>
                             <p id="current-data"> 16:35 Sunday, 28</p>
-                        <!--     <span class="weather-ico__head">&#9728;&#65039;</span> -->
-                            <div><span id='temp'>30</span>  C </div>
+                            <!--     <span class="weather-ico__head">&#9728;&#65039;</span> -->
+                            <div class="temperature"><span id='temp'>30</span> C </div>
                             <p id="weather-desc"></p>
                         </div>
                         <div class="weather-head__block-two">
-                            <p>05:00 Sunrise</p>
-                            <p>21:00 Sunset</p>
-                            <p>Rain 0%</p>
+                            <p id="sunrise">05:00 Sunrise</p>
+                            <p id="sunset">21:00 Sunset</p>
+                            <p id="humidity">Humidity 0%</p>
                         </div>
                     </div>
-                    
                     <div class="weather-footer">
-                        <form action="#" c id='search-form'>
-                            <input type="text" class="search-form__input" id='city-input' placeholder="Search for a city..." autocomplete="off" autofocus="on">
-                            <input type="submit" class="btn" value="Search"></input>
-                        <button id="current-loc">Current</button>
+                        <form action="#" id='search-form'>
+                            <input type="text" class="search-form__input" id='city-input' placeholder="Search for a city..." autocomplete="off" autofocus>
+                            <input type="submit" class="btn" value="Search">
+                            <button id="current-loc">Current</button>
                         </form>
-
                     </div>
                 </div>
             </main>
-            <footer class="footer">
-            </footer>
         </div>
     </div>
-  <script src="script.js"></script>
+    <footer>
+        <div class="footer">Code on <a class="link" href="https://github.com/kosh3n/Vanilla-Weather-Forecast">git</a></div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
+  
