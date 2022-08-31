@@ -37,7 +37,18 @@ body {
 .weather-head__block-one {
     border: 3px solid #185ADB;
     margin-left: 8px;
-    margin-right: 95px;
+    margin-right: 65px;
+}
+
+
+#current-data,
+#weather-desc,
+.temperature,
+#temp,
+#humidity,
+#sunset,
+#sunrise {
+    font-size: 1.3rem;
 }
 
 .weather-head__block-two {
@@ -62,6 +73,7 @@ body {
     margin: 20px;
     border: 2px solid #bf1363;
     text-align: left;
+    font-size: 1.3rem;
 }
 
 .weather-ico__head {
@@ -86,10 +98,27 @@ p {
     cursor: pointer;
     background-color: #F9B1D9;
     border-radius: 5px;
+    font-size: 1.3rem;
 }
 
 #current-loc {
     cursor: pointer;
     background-color: #F9B1D9;
     border-radius: 5px;
+    font-size: 1.3rem;
 }
+
+.footer {
+    font-size: 1rem;
+}
+
+.link {
+    text-decoration: none;
+    color: #0a1931;
+    font-size: 1rem;
+}
+
+.link:hover {
+    opacity: 0.3;
+}
+  
