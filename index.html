@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link type="image/png" sizes="16x16" rel="icon" href="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/1A1A1A/external-weather-digital-nomading-relocation-flaticons-lineal-color-flat-icons.png" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="weather">
+            <header class="header">
+            </header>
+            <main class="main">
+                <div class="weather-body">
+                    <div class="weather-head">
+                        <div class="weather-head__block-one">
+                            <p id="city">Odesa</p>
+                            <p id="current-data"> 16:35 Sunday, 28</p>
+                        <!--     <span class="weather-ico__head">&#9728;&#65039;</span> -->
+                            <div><span id='temp'>30</span>  C </div>
+                            <p id="weather-desc"></p>
+                        </div>
+                        <div class="weather-head__block-two">
+                            <p>05:00 Sunrise</p>
+                            <p>21:00 Sunset</p>
+                            <p>Rain 0%</p>
+                        </div>
+                    </div>
+                    
+                    <div class="weather-footer">
+                        <form action="#" c id='search-form'>
+                            <input type="text" class="search-form__input" id='city-input' placeholder="Search for a city..." autocomplete="off" autofocus="on">
+                            <input type="submit" class="btn" value="Search"></input>
+                        <button id="current-loc">Current</button>
+                        </form>
+
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+            </footer>
+        </div>
+    </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
