@@ -11,24 +11,27 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="weather">
-            <header class="header">
+       <header class="header">My weather
             </header>
+    <div class="wrapper">
+
+        <div class="weather">
+            
             <main class="main">
                 <div class="weather-body">
                     <div class="weather-head">
                         <div class="weather-head__block-one">
                             <p id="city">Odesa</p>
                             <p id="current-data"> 16:35 Sunday, 28</p>
-                            <!--     <span class="weather-ico__head">&#9728;&#65039;</span> -->
-                            <div class="temperature"><span id='temp'>30</span> C </div>
+<div class="temperature"><span class="weather-ico__head">&#9728;&#65039;</span>
+                            <span id='temp'>30</span> C </div>
+
                             <p id="weather-desc"></p>
                         </div>
                         <div class="weather-head__block-two">
-                            <p id="sunrise">05:00 Sunrise</p>
-                            <p id="sunset">21:00 Sunset</p>
-                            <p id="humidity">Humidity 0%</p>
+                            <p id="atmospheric-pressure">Pressure: <span class="pressure"></span></p>
+                            <p id="humidity-chance">Humidity: <span class="humidity"></span>%</p>
+                              <p id="wind-speed">Wind speed: <span class="wind"></span> km/h</p>
                         </div>
                     </div>
                     <div class="weather-footer">
@@ -42,11 +45,10 @@
             </main>
         </div>
     </div>
-    <footer>
-        <div class="footer">Code on <a class="link" href="https://github.com/kosh3n/Vanilla-Weather-Forecast">git</a></div>
+    <footer class="footer">
+        <div >Code on <a class="link" href="https://github.com/kosh3n/Vanilla-Weather-Forecast">git</a></div>
     </footer>
     <script src="script.js"></script>
 </body>
 
 </html>
-  
