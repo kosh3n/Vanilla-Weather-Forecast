@@ -15,13 +15,13 @@
 }
 
 body {
-    background-color: #edf5e1; 
+    background-color: #edf5e1;
     color: #0a1931;
 }
 
-.header{
+.header {
     background-color: #379683;
-   padding: 30px;
+    padding: 20px;
 }
 
 .wrapper {
@@ -32,10 +32,9 @@ body {
 
 .weather {
     background-color: #5cdb95;
-    border: 2px solid #379683;
-    margin-bottom: 110px;
+    border: 3px solid #379683;
+    margin-bottom: 163px;
 }
-
 
 .weather-head {
     display: flex;
@@ -44,24 +43,59 @@ body {
 
 .weather-head__block-one {
     border: 2px solid #379683;
+    padding: 10px 10px;
     margin-left: 8px;
-    margin-right: 65px;
+    margin-right: 25px;
 }
 
+.current-data {}
+
+.temperature {
+    margin-top: -15px;
+    margin-bottom: -15px;
+    display: flex;
+    justify-content: center;
+}
+
+.current-temperature {
+    padding-top: 25px;
+}
+
+.grad {
+    font-size: 0.8rem;
+    position: relative;
+    top: -10px;
+    text-decoration: none;
+    color: #0a1931;
+}
+
+.grad:hover {
+    color: #edf5e1;
+}
+
+.active {
+    color: #edf5e1;
+    cursor: default;
+}
 
 #current-data,
 #weather-desc,
 .temperature,
-#temp,
-#atmospheric-pressure, .pressure, #wind-speed, .wind, #humidity-chance, .humidity
- {
-font-size: 1.3rem;
-opacity: 0.9;
+#atmospheric-pressure,
+.pressure,
+#wind-speed,
+.wind,
+#humidity-chance,
+.humidity {
+    font-size: 1.3rem;
+    opacity: 0.9;
 }
 
 .weather-head__block-two {
     border: 2px solid #379683;
-    padding: 20px;
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .weather-main__blocks {
@@ -77,10 +111,7 @@ opacity: 0.9;
     border: 2px solid #05386B;
     text-align: left;
     font-size: 1.3rem;
-}
-
-.weather-ico__head {
-   
+    margin-right: 45px;
 }
 
 p {
@@ -92,12 +123,11 @@ p {
 }
 
 .weather-footer {
-padding-left: 45px;
+    padding-left: 45px;
 }
 
 .btn {
-    margin-left: -14px;
-    margin-right: 10px;
+    margin-right: 30px;
     cursor: pointer;
     background-color: #C7FFD8;
     border-radius: 5px;
@@ -110,17 +140,18 @@ padding-left: 45px;
     background-color: #C7FFD8;
     border-radius: 5px;
     font-size: 1.3rem;
-        color: #161D6F;
+    color: #161D6F;
 }
 
-.btn:hover, #current-loc:hover{
+.btn:hover,
+#current-loc:hover {
     background-color: #8ee4af;
-border: 1px solid #161D6F;
+    border: 1px solid #161D6F;
 }
 
 .footer {
-        background-color: #379683;
-    padding: 30px;
+    background-color: #379683;
+    padding: 20px;
     font-size: 1rem;
 }
 
@@ -130,5 +161,6 @@ border: 1px solid #161D6F;
 }
 
 .link:hover {
+    text-decoration: underline;
     opacity: 0.3;
 }
