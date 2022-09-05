@@ -8,30 +8,34 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link type="image/png" sizes="16x16" rel="icon" href="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/1A1A1A/external-weather-digital-nomading-relocation-flaticons-lineal-color-flat-icons.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 
 <body>
-       <header class="header">My weather
-            </header>
+    <header class="header">My weather forecast <span>&#127777;&#65039;</span>
+    </header>
     <div class="wrapper">
-
         <div class="weather">
-            
             <main class="main">
                 <div class="weather-body">
                     <div class="weather-head">
                         <div class="weather-head__block-one">
-                            <p id="city">Odesa</p>
-                            <p id="current-data"> 16:35 Sunday, 28</p>
-<div class="temperature"><span class="weather-ico__head">&#9728;&#65039;</span>
-                            <span id='temp'>30</span> C </div>
-
+                            <p id="city"></p>
+                            <p id="current-data"> </p>
+                            <div class="temperature"> <img src="#" alt="#" id="icon">
+                                <div class="current-temperature"> <span id='temp'></span>
+                                    <span><a class="grad active" id="celsius" href="#"> C </a>|
+                                        <a class="grad" id="fahrenheit" href="#">F</a></span>
+                                </div>
+                            </div>
                             <p id="weather-desc"></p>
                         </div>
                         <div class="weather-head__block-two">
                             <p id="atmospheric-pressure">Pressure: <span class="pressure"></span></p>
                             <p id="humidity-chance">Humidity: <span class="humidity"></span>%</p>
-                              <p id="wind-speed">Wind speed: <span class="wind"></span> km/h</p>
+                            <p id="wind-speed">Wind speed: <span class="wind"></span> km/h</p>
                         </div>
                     </div>
                     <div class="weather-footer">
@@ -46,7 +50,7 @@
         </div>
     </div>
     <footer class="footer">
-        <div >Code on <a class="link" href="https://github.com/kosh3n/Vanilla-Weather-Forecast">git</a></div>
+        <div>Code on <a class="link" href="https://github.com/kosh3n/Vanilla-Weather-Forecast">Git</a></div>
     </footer>
     <script src="script.js"></script>
 </body>
