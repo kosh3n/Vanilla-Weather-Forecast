@@ -23,12 +23,19 @@ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&unit
 
 function showWeather(response) {
     console.log(response);
+
+    celsiusTemp = response.data.main.temp;
+
     let temp = document.querySelector('#temp');
-    temp.innerHTML = Math.round(response.data.main.temp) + deg;
+    temp.innerHTML = Math.round(celsiusTemp) + deg;
+
+    let iconElement = document.querySelector('#icon');
+    iconElement.setAttribute('src', `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    iconElement.setAttribute('alt', response.data.weather[0].description);
 
     let descWeather = document.querySelector('#weather-desc');
     descWeather.innerHTML = response.data.weather[0].description;
-    document.querySelector("#city").innerHTML = response.data.name;
+    document.querySelector('#city').innerHTML = response.data.name;
 
     let pressure = document.querySelector('.pressure');
     pressure.innerHTML = response.data.main.pressure;
@@ -49,12 +56,12 @@ function searchCity(city) {
 
 function handleSubmit(event) {
     event.preventDefault();
-    let city = document.querySelector("#city-input").value;
+    let city = document.querySelector('#city-input').value;
     searchCity(city);
 }
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
+let searchForm = document.querySelector('#search-form');
+searchForm.addEventListener('submit', handleSubmit);
 
 
 // geolocation
@@ -72,3 +79,30 @@ function getCurrentPosition(event) {
 
 let button = document.querySelector('#current-loc');
 button.addEventListener('click', getCurrentPosition);
+
+
+// celsius & fahrenheit
+function displayFahrenheitTemp(event) {
+    event.preventDefault();
+    let tempEl = document.querySelector('#temp');
+    celsius.classList.remove('active');
+    fahrenheit.classList.add('active');
+    let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+    tempEl.innerHTML = Math.round(fahrenheitTemp) + deg;
+}
+
+function displayCelsiusTemp(event) {
+    event.preventDefault();
+    fahrenheit.classList.remove('active');
+    celsius.classList.add('active');
+    let tempEl = document.querySelector('#temp');
+    tempEl.innerHTML = Math.round(celsiusTemp) + deg;
+}
+
+let celsiusTemp = null;
+
+let fahrenheit = document.querySelector('#fahrenheit');
+fahrenheit.addEventListener('click', displayFahrenheitTemp);
+
+let celsius = document.querySelector('#celsius');
+celsius.addEventListener('click', displayCelsiusTemp);
