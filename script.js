@@ -16,16 +16,52 @@ let month = months[now.getMonth()];
 let currentData = document.querySelector('#current-data');
 currentData.innerHTML = `${day} ${month}, ${hours}:${minutes}, ${year}`;
 
+function formatDay(timeStamp) {
+    let date = new Date(timeStamp * 1000);
+    let day = date.getDay();
+    return days[day];
+}
+
+
+// forecast
+function displayForecast(response) {
+    let forecast = response.data.daily;
+    let forecastEl = document.querySelector('#forecast');
+    let forecastHTML = '';
+
+    forecast.forEach(function(forecastDay, index) {
+        if (index < 4) {
+            forecastHTML +=
+                `<div class="forecast-item">
+    <div class="forecast-day">
+        <p class="forecast-day__text">${formatDay(forecastDay.dt)}</p>
+        <img class="forecast-ico" src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="#">
+    </div>
+    <span class="forecast-temp">${Math.round(forecastDay.temp.day)+deg}</span> <span class="forecast-temp">${Math.round(forecastDay.temp.night)+deg}</span>
+</div>`;
+            forecastEl.innerHTML = forecastHTML;
+        }
+    });
+}
+
+
 // weather api
 let cityName = 'Odesa';
 let apiKey = 'b39a9b967790500d44fb2b61ad166507';
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${apiKey}`;
 
+function getForecast(coordinates) {
+    let apiKey = 'c95d60a1e3adbeb286133f1ebebc2579';
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+    console.log(apiUrl);
+    axios.get(apiUrl).then(displayForecast);
+}
+
+
 function showWeather(response) {
     console.log(response);
 
     celsiusTemp = response.data.main.temp;
-
     let temp = document.querySelector('#temp');
     temp.innerHTML = Math.round(celsiusTemp) + deg;
 
@@ -45,6 +81,8 @@ function showWeather(response) {
 
     let wind = document.querySelector('.wind');
     wind.innerHTML = response.data.wind.speed;
+
+    getForecast(response.data.coord);
 }
 
 axios.get(`${apiUrl}&appId=${apiKey}`).then(showWeather);
