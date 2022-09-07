@@ -21,7 +21,7 @@
             <main class="main">
                 <div class="weather-body">
                     <div class="weather-head">
-                        <div class="weather-head__block-one">
+                        <div class="weather-head__block-first">
                             <p id="city"></p>
                             <p id="current-data"> </p>
                             <div class="temperature"> <img src="#" alt="#" id="icon">
@@ -32,11 +32,14 @@
                             </div>
                             <p id="weather-desc"></p>
                         </div>
-                        <div class="weather-head__block-two">
+                        <div class="weather-head__block-second">
                             <p id="atmospheric-pressure">Pressure: <span class="pressure"></span></p>
                             <p id="humidity-chance">Humidity: <span class="humidity"></span>%</p>
                             <p id="wind-speed">Wind speed: <span class="wind"></span> km/h</p>
                         </div>
+                    </div>
+                    <div class="forecast-container" id="forecast">
+                        <div class="forecast-item"></div>
                     </div>
                     <div class="weather-footer">
                         <form action="#" id='search-form'>
