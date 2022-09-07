@@ -33,7 +33,8 @@ body {
 .weather {
     background-color: #5cdb95;
     border: 3px solid #379683;
-    margin-bottom: 163px;
+    margin-top: -60px;
+    margin-bottom: 36px;
 }
 
 .weather-head {
@@ -41,14 +42,12 @@ body {
     margin: 20px;
 }
 
-.weather-head__block-one {
+.weather-head__block-first {
     border: 2px solid #379683;
     padding: 10px 10px;
     margin-left: 8px;
     margin-right: 25px;
 }
-
-.current-data {}
 
 .temperature {
     margin-top: -15px;
@@ -91,7 +90,7 @@ body {
     opacity: 0.9;
 }
 
-.weather-head__block-two {
+.weather-head__block-second {
     border: 2px solid #379683;
     padding-top: 50px;
     padding-left: 10px;
@@ -133,6 +132,7 @@ p {
     border-radius: 5px;
     font-size: 1.3rem;
     color: #161D6F;
+    border: 1px solid #161D6F;
 }
 
 #current-loc {
@@ -141,6 +141,7 @@ p {
     border-radius: 5px;
     font-size: 1.3rem;
     color: #161D6F;
+    border: 1px solid #161D6F;
 }
 
 .btn:hover,
@@ -163,4 +164,34 @@ p {
 .link:hover {
     text-decoration: underline;
     opacity: 0.3;
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.forecast-item {
+    border: 1px solid #161D6F;
+}
+
+.weather-head__block-first:hover,
+.weather-head__block-second:hover,
+.forecast-item:hover {
+    background-color: #8ee4af;
+}
+
+.forecast-day {
+    display: flex;
+    flex-direction: column;
+}
+
+.forecast-day__text {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.forecast-temp {
+    font-size: 1rem;
+    opacity: 0.9;
 }
